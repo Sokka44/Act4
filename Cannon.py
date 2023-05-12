@@ -70,9 +70,10 @@ def move():
 
     draw()
 
+# Se modifica el condicional if, si los objetivos se salen de los limites, entonces se regresan al lado derecho de la pantalla
     for target in targets:
         if not inside(target):
-            return
+            target.x == 200
 
     ontimer(move, 50)
 
