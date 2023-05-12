@@ -70,8 +70,8 @@ def move():
     for target in targets:
         if not inside(target):
             target.x == 200
-
-    ontimer(move, 50)
+# Se modifica el tiempo para dar ilusión de que todo avanza más rapido
+    ontimer(move, 5)
 
 
 setup(420, 420, 370, 0)
