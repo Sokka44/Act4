@@ -1,11 +1,7 @@
 """Cannon, hitting targets with projectiles.
 
 Exercises
-
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
+Make 
 """
 
 from random import randrange
@@ -23,9 +19,9 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 300) / 25 
-        speed.y = (y + 300) / 25
-""" Modificamos la caida de la bala"""
+        speed.x = (x + 250) / 25
+        speed.y = (y + 250) / 25
+
 
 def inside(xy):
     """Return True if xy within screen."""
@@ -70,13 +66,13 @@ def move():
 
     draw()
 
+# Se modifica el condicional if, si los objetivos se salen de los limites, entonces se regresan al lado derecho de la pantalla.
     for target in targets:
         if not inside(target):
-            target.x==200
-        
+            target.x == 200
 
-    ontimer(move, 5)   
-"""Movimos el tiempo en el que se mueven los objetivos y la bala """
+    ontimer(move, 50)
+
 
 setup(420, 420, 370, 0)
 hideturtle()
